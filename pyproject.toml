@@ -1,0 +1,40 @@
+[build-system]
+requires = [
+    "setuptools>=61.0"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stim-analysis"
+version = "0.1.0"
+description = "Code for analysis of stimulation experiments in the Batista lab."
+authors = [
+    {name = "Collin Lehmann", email = "collinlehmann@gmail.com"},
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "jupyter",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "pyvista",
+    "seaborn",
+    "setuptools",
+    "scikit-learn",
+    "scipy",
+    "torch",
+    # remote dependencies
+    "miso_analysis @ git+https://github.com/raeedcho/miso-analysis",
+    "nasnet @ git+https://github.com/raeedcho/nasnet",
+    "pyns @ git+https://github.com/raeedcho/pyns.git",
+    "smile_extract @ git+https://github.com/raeedcho/smile-extraction.git",
+    "trialframe @ git+https://github.com/raeedcho/trialframe.git"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "isort"
+]
